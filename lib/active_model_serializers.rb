@@ -12,7 +12,7 @@ begin
   ActiveSupport.on_load(:action_controller) do
     if ::ActionController::Serialization.enabled
       ActionController::Base.send(:include, ::ActionController::Serialization)
-      ActionController::TestCase.send(:include, ::ActionController::SerializationAssertions)
+      # ActionController::TestCase.send(:include, ::ActionController::SerializationAssertions)
     end
   end
 rescue LoadError
